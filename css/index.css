@@ -911,6 +911,9 @@ span{
 }
 .blog-tab .row .card {
     width: 38rem !important;
+    /* margin: 0px; */
+    /* padding: 0px; */
+    left: 24px;
 }
 
 .blog-tab .card .card-body .card-text {

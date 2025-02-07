@@ -39,7 +39,7 @@
 <section class="home" id="home">
     <div class="home-content">
         <h1>I'M RAUSHAN KUMAR </h1>
-        <h3 style="">WEB SECURITY RESEARCHER <span class="multiple-text"></span></h3>
+        <h3 style="">WEB APPLICATION PENTESTING <span class="multiple"></span></h3>
         <p style="margin-top: 15px;">I'm Passionate cybersecurity enthusiast with hands-on experience
             safeguarding web applications and securing digital environments.
             Proficient in vulnerability assessment, penetration testing, and
@@ -390,27 +390,37 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <!-- <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> -->
-    <script src="script.js"></script>
-    
+
+<script src="./js/script.js"></script>    
 <script>
-    const form=document.querySelector('form');
-    function sendEmail(){
-        Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "@gmail.com",
-            Password : "",
-            To : '@gmail.com',
-            From : "@gmail.com",
-            Subject : "This is the sub",
-            Body : "This is the body"
-        }).then(
-          message => alert(message)
-        );
-    }
-    form.addEventListener("submit",(e)=>{
-        e.preventDefault();
-        sendEmail();
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector("form");
+
+        async function sendEmail() {
+            try {
+                const response = await Email.send({
+                    Host: "smtp.elasticemail.com",
+                    Username: "your-email@gmail.com",
+                    Password: "your-password", // ⚠️ Consider handling this securely on the backend
+                    To: "recipient@gmail.com",
+                    From: "your-email@gmail.com",
+                    Subject: "This is the subject",
+                    Body: "This is the email body"
+                });
+
+                alert(response);
+            } catch (error) {
+                console.error("Email sending failed:", error);
+                alert("Failed to send email. Check console for details.");
+            }
+        }
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            sendEmail();
+        });
     });
+</script>
 </script>
 </body>
 </html>

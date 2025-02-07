@@ -1,6 +1,6 @@
 
-let menuIcon=document.querySelector('menu-icon');
-let navbar=document.querySelector('navbar');
+let menuIcon=document.getElementById('menu-icon');
+let navbar=document.getElementById('navbar');
 
 menuIcon.addEventListener('click', () => {
     navbar.classList.toggle('active');

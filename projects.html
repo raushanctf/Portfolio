@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raushan Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<!-- -------header --------- -->
+<header class="header">
+    <a href="#" class="logo">Raushan <span>Kumar</span></a>
+
+    <i class='bx bx-menu' id="menu-icon"></i>
+
+    <ul class="navbar" id="navbar">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="projects.html">Projects</a></li> 
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    
+</header>
+<!--  -->
+
+    <!-- -----------portfolio section-------------- -->
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">LATEST <span>PROJECTS</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="images/passwordcracker.webp" alt="Password Cracker">
+                <div class="portfolio-layer">
+                    <h4>Password Cracker Projects</h4>
+                    <p>There are many ways to crack a password, among them there is “the brute force attack” method. </p>
+                    <a href="https://github.com/raushanctf/Digitalclock"target="_blank"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/antivirus.webp" alt="Antivirus Projects ">
+                <div class="portfolio-layer">
+                    <h4>Antivirus Detection tools</h4>
+                    <p>A simple antivirus projects coded in capable of scanning files and identifying potential
+                        malware or suspicious content.</p>
+                    <a href="https://github.com/raushanctf/Digitalclock"target="_blank"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/metasploitable.jpg" alt="metasploitable machine">
+                <div class="portfolio-layer">
+                    <h4>Metasploitable Projects</h4>
+                    <p>In this project we did Identify and exploit vulnerabilities in a safe lab environment.we used Test security tools like Metasploit Framework, Nmap, Nikto, and dirbuster. </p>
+                    <a href="https://github.com/raushanctf/Digitalclock"target="_blank"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/webauth.jpeg" alt="Web-Based authentication">
+                <div class="portfolio-layer">
+                    <h4>Web-based Authentication Projects</h4>
+                    <p>In this Projects we have provide security the process of verifying a user's identity before granting access to a website or web application.</p>
+                    <a href="https://github.com/raushanctf/Digitalclock" target="_blank"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            
+            <div class="portfolio-box">
+                <img src="images/Digitalclock.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Digital Clock Project</h4>
+                    <p>we Developed Digital Clock simple and Creative with the help of techonologies like HTML, CSS and Javascripts.</p>
+                    <a href="https://github.com/raushanctf/Digitalclock" target="_blank"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/passwordgen.webp" alt="Password Generation Tools">
+                <div class="portfolio-layer">
+                    <h4>Password Generation tools.</h4>
+                    <p>This is Password Geneartion tools Created Using Python and his library...</p>
+                    <a href="https://github.com/raushanctf/Digitalclock"target="_blank"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+<!-- -----------footer------------- -->
+<footer class="footer">
+    <div class="footer-text">
+        <p>Copyright &copy; 2025 by Raushan Kumar | All Rights Reserved</p>
+    </div>
+    <div class="footer-iconTop">
+        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+</footer>
+
+
+<!-- --------scroll reveal--------- -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+
+<!-- ------typed js ------ -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<!-- <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> -->
+    <script src="script.js"></script>
+    
+<script>
+    const form=document.querySelector('form');
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "@gmail.com",
+            Password : "",
+            To : '@gmail.com',
+            From : "@gmail.com",
+            Subject : "This is the sub",
+            Body : "This is the body"
+        }).then(
+          message => alert(message)
+        );
+    }
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        sendEmail();
+    });
+</script>
+</body>
+</html>
